@@ -23,7 +23,8 @@ class RobotContainer {
   RobotContainer();
 
   frc2::Command* GetAutonomousCommand();
-
+  void StopAllMotors();
+  
  private:
   // The robot's subsystems and commands are defined here...
 
@@ -36,4 +37,6 @@ class RobotContainer {
 
 
   void ConfigureButtonBindings();
+
+
 };

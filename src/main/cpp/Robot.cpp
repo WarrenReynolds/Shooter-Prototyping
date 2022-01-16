@@ -53,6 +53,8 @@ void Robot::TeleopInit() {
     m_autonomousCommand->Cancel();
     m_autonomousCommand = nullptr;
   }
+//stop the motors when the robot become enabled.  
+  m_container.StopAllMotors();
 }
 
 /**
