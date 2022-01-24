@@ -22,7 +22,7 @@ void SetBottomMotorSpeed::Initialize()
 void SetBottomMotorSpeed::Execute()
 {
   m_subsystem->SetBottomMotorPower(m_motorSpeedFunction());
-    frc::SmartDashboard::PutNumber("Bottom Motor Speed",m_motorSpeedFunction());
+
 }
 
 // Called once the command ends or is interrupted.

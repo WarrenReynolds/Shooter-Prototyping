@@ -22,7 +22,7 @@ void SetTopMotorSpeed::Initialize()
 void SetTopMotorSpeed::Execute()
 {
   m_subsystem->SetTopMotorPower(m_motorSpeedFunction());
-  frc::SmartDashboard::PutNumber("Top Motor Speed",m_motorSpeedFunction());
+
 }
 
 // Called once the command ends or is interrupted.

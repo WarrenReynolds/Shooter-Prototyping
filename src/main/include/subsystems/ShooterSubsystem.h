@@ -44,13 +44,34 @@ class ShooterSubsystem : public frc2::SubsystemBase {
    */
   void SetBottomMotorState(bool MotorState);
 
+  void StepTopMotorSpeed(int Direction);
+    /**
+     * Changes Top Motor Speed by 5% in direction of sign of Direction
+     */
+
+  void StepBottomMotorSpeed(int Direction);
+    /**
+     * Changes Top Motor Speed by 5% in direction of sign of Direction
+     */
+
+
+  /**
+   * Sets Feed motor percentage power.
+   */
+  void SetFeedMotorPower(double FeedSpeed);
+
+
  private:
   // Components (e.g. motor controllers and sensors) should generally be
   // declared private and exposed only through public methods.
 TalonFX m_bottomMotor{1};
-TalonFX m_topMotor{2};
+TalonFX m_bottomMotorMirror{2};
+TalonFX m_topMotor{3};
+TalonFX m_feedMotor{4};
+
 double m_bottomPercentagePower=0.0;
 double m_topPercentagePower=0.0;
+double m_feedPercentagePower=0.0;
 
 bool m_bottomMotorEnabled=false;
 bool m_topMotorEnabled=false;
